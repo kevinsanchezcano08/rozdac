@@ -249,6 +249,9 @@
     .lp a{
         margin-left: -20%;
     }
+    .cards{
+        margin-left: 40%;
+    }
 }
 
 @media screen and (max-width: 1024px){
