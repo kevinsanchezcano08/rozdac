@@ -1,0 +1,200 @@
+ *{
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+body{
+    margin: 0;
+    padding: 0;
+
+}
+header{
+    top:0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background: white;
+    box-shadow: 2px 2px 10px #999;
+
+}
+
+#btn-menu{
+    display: none;
+}
+#inicio{
+    display: none;
+}
+header label{
+    display: none; 
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    
+}
+header label:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.6);
+}
+
+#log{
+    display: none;
+}
+.menu{
+     justify-content: center;
+
+}
+
+.menu ul{
+    margin: 0;
+    text-align: right;
+    list-style: none;
+    padding: 0;
+    display: flex;
+   
+    justify-content: center;
+
+}
+.menu li a{
+
+}
+.menu #logoAlb{
+    background: url('../img/rozdac.jpg');
+    background-size:80%;
+    background-position:0 5px;
+    background-repeat: no-repeat;
+    padding: 30px 60px;
+    transition: 0.4s;
+
+}
+.menu #carrito{
+    background: url('../img/Carrito.png');
+    background-size:70%;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-top: 10%;
+    padding: 30px 2vw;
+
+}
+.menu li a{
+    display: block;
+    
+    padding: 30px 2vw;
+    color: #000;
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.menu a:hover{
+    color: yellow;
+}
+
+.menu #carrito:hover{
+    background: url('../img/Carrito.png');
+    background-size:70%;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-top: 10%;
+
+}
+.menu #active{
+    color: yellow;
+    font-weight: bold;
+}
+
+.menu #active:hover{
+    color: white;
+    font-weight: bold;
+}
+header img{
+    padding-top: 2px;
+}
+
+@media (max-width: 895px){
+    header label{
+        display: block;
+        padding: 20px 20px;
+   
+        float: left;
+    }
+
+    #log{
+        display: block;
+        margin-left: 45%;
+    }
+    .menu{
+        position: absolute;
+        background: white;
+
+        width: 100%;
+        margin-left: -100%;
+        transition: all 0.5s;
+    }
+
+    .menu #inicio{
+        display: block;
+    }
+    .menu ul{
+        flex-direction: column;
+        
+    }
+
+    .menu li{
+        top
+        margin-left: 15%;
+        margin-right: 15%;
+        border-bottom: 1px solid black;
+
+    }
+    .menu #logoAlb{
+        display: none;
+        border-bottom: none;
+    }
+    .menu #carrito{
+        background: url('../img/Carrito.png');
+        background-size:10%;
+        background-position:center right;
+        background-repeat: no-repeat;
+        margin-top: 0%;
+        padding: 30px 30px;
+
+    }
+    .menu #carrito:hover{
+        background: url('../img/Carrito.png');
+        background-size:10%;
+        background-position:center right;
+        background-repeat: no-repeat;
+        margin-top: 0%;
+        padding: 30px 30px;
+
+    }
+    #btn-menu:checked ~ .menu{
+        margin-left: 0;
+        position: relative;
+ 
+
+    }
+    #linkLogo{
+        margin-right: 15%;
+        margin-left: %;
+        background: red;
+    }
+
+}
+
+.principal{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
