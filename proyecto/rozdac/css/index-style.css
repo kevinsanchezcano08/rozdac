@@ -310,7 +310,7 @@
 
 @media screen and (max-width: 768px){
     #log{
-        margin-left: 42%;
+        margin-left: 45%;
     }
     .menu li{
         margin-left: 15%;
@@ -355,7 +355,7 @@
 
 @media screen and (max-width: 425px){
     #log{
-        margin-left: 32%;
+        margin-left: 60%;
     }
     .menu li{
         margin-left: 5%;
@@ -413,7 +413,7 @@
 
 @media screen and (max-width: 375px){
     #log{
-        margin-left: 30%;
+        margin-left: 55%;
     }
     .menu li{
         margin-left: 5%;
@@ -446,6 +446,9 @@
 }
 
 @media screen and (max-width: 320px){
+    #log{
+        margin-left: 45%;
+    }
     .menu li{
         margin-left: 5%;
         margin-right: 45%;
