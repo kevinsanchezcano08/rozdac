@@ -27,7 +27,6 @@ header label{
 }
 header label:hover{
     cursor: pointer;
-    background: rgba(0,0,0,0.6);
 }
 
 #log{
