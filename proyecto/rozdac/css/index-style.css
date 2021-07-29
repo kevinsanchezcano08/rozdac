@@ -84,8 +84,8 @@
 .body p{
     font-family: 'Catamaran', sans-serif;
     text-align: justify;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     font-size: 20px;
     margin-bottom: 2%;
 }
@@ -99,7 +99,7 @@
 .descp .fas{
     color: white;
     font-size: 100px;
-    margin-left: 46vw;
+    margin-left: 45.5vw;
     margin-bottom: 1%;
 }
 .descp h1{
@@ -168,8 +168,7 @@
 }
 .cards .profile {
   border-radius: 50%;
-  position: absolute;
-  bottom: 95%;
+  margin-top: -30%;
   left: 25px;
   z-index: 1;
   max-width: 90px;
@@ -231,10 +230,20 @@
     font-size: 20px;
     border-radius: 5px;
 }
-.lp a:hover{
+.lp a .fas{
     color: #F2CB05;
-    border-color: #F2CB05;
-    transition: 0.5s;
+}
+#description{
+    color: transparent;
+    margin-bottom: 5%;
+}
+#services{
+    color: transparent;
+    margin-bottom: 5%;
+}
+#team{
+    color: transparent;
+    margin-bottom: 5%;
 }
 
 /*RESPONSIVE*/
@@ -256,14 +265,17 @@
 
 @media screen and (max-width: 1024px){
     .backg img{
-        margin-left: 11vw;
+        margin-left: 12vw;
+        margin-top: 3%;
+        width: 750px;
     }
     .backg a{
-       margin-left: -69%;
+       margin-left: -65%;
        margin-top: 25%;
     }
     .text{
         left: 20%;
+        top: 38%;
     }
     .descp .fas{
         margin-left: 45vw;
@@ -285,6 +297,15 @@
         margin-top: 26%;
         margin-left: -28%;
     }
+    #description{
+        margin-bottom: 6%;
+    }
+    #services{
+        margin-bottom: 6%;
+    }
+    #team{
+        margin-bottom: 6%;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -297,11 +318,11 @@
     }
     .backg a{
        margin-left: -73%;
-       margin-top: 25%;
+       margin-top: 26%;
     }
     .text{
         left: 16%;
-        top: 42%;
+        top: 46%;
     }
     .descp .fas{
         margin-left: 44vw;
@@ -335,7 +356,7 @@
     }
     .text{
         left: 13%;
-        top: 19%;
+        top: 22%;
         font-size: 30px;
     }
     .descp .fas{
@@ -348,9 +369,6 @@
     .serv h2{
         margin-left: 20vw;
         margin-right: 20vw;
-    }
-    .eqp{
-        margin-top: 15%;
     }
     .cards{
         margin-left: 12%;
@@ -367,6 +385,15 @@
     .lp a{
         margin-top: 50%;
         margin-left: -59%;
+    }
+    #description{
+        margin-bottom: 10%;
+    }
+    #services{
+        margin-bottom: 10%;
+    }
+    #team{
+        margin-bottom: 10%;
     }
 }
 
