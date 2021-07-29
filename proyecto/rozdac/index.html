@@ -4,13 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/index-style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script src="https://kit.fontawesome.com/28279bfb40.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="media/favicon.jpg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
     <title>Inicio | Rozdac</title>
 </head>
 <body>
+  <header id="home">  
+    <input type="checkbox" id="btn-menu">
+    <label for="btn-menu"><img src="media/menu-icon.png" width="30px"></label>
+    <img id="log" src="media/rozdac.jpg" width="85px" alt="logo Rozdac">
+    <nav class="menu">
+        <ul>
+            <li><a href="#home" id="logoAlb"></a></li>
+            <li><a href="#description">¿Qué es Rozdac?</a></li>
+            <li><a href="#services">¿Por qué Rozdac?</a></li>
+            <li><a href="#team">Equipo</a></li>
+            <li><a href="#" id="login"><i class="fas fa-sign-in-alt"></i></a></li>
+        </ul>
+    </nav>
+</header>
     <div class="head">
         <div class="backg">
             <img src="media/back.jpg">
@@ -27,7 +42,8 @@
     </div>
     <div class="body">
         <div class="descp">
-            <i class="fas fa-question-circle" id="description"></i>
+          <p id="description">Here</p>
+            <i class="fas fa-question-circle"></i>
              <h1>¿Qué es Rozdac?</h1>
              <p>Rozdac es un app dedicada al comercio virtual que hoy en dia debido a la pandemia por covid-19, ha experimentado un boom dentro del mercado nacional e 
                  internacional. Nuestra app cuenta con muchas funciones desde poder administrar tu pequeño negocio (Ej. Una tiendita) a traves del manejo de todo
@@ -36,7 +52,8 @@
              </p>
         </div>
         <div class="serv">
-            <h1 id="services">¿Por qué Rozdac?</h1>
+          <p id="services">Here</p>
+            <h1>¿Por qué Rozdac?</h1>
             <div class="serv-client">
                 <img src="media/business_shop.svg">
                 <h2>Para ti que vendes</h2>
@@ -58,7 +75,8 @@
             </div>
         </div>
         <div class="eqp">
-            <h1 id="team">Nuestro Equipo</h1>
+          <p id="team">Here</p>
+            <h1>Nuestro Equipo</h1>
             <p>Conoce un poco sobre los desarrolladores de Rozdac ;)</p>
         </div>
         <figure class="cards">
@@ -108,6 +126,34 @@
               <a href="#">¡Usar la app! <i class="fas fa-arrow-circle-right"></i></a>
           </div>
     </div>
+    <section>
+      <footer class="container">
+          <div class="social-media">
+              <nav>
+                  <a href="#">
+                      <img src="https://i.postimg.cc/SxprfYTY/facebook.png" alt="Facebook">
+                  </a>
+                  <a href="#">
+                      <img src="https://i.postimg.cc/W4NwQLP2/instagram.png" alt="Instagram">
+                  </a>
+                  <a href="#">
+                      <img src="https://i.postimg.cc/s2T4z6V5/youtube.png" alt="YouTube">
+                  </a>
+                  <a href="#">
+                      <img src="https://i.postimg.cc/vZLvq8kq/pinterest.png" alt="Pinterest">
+                  </a>
+              </nav>
+          </div>
+          <br>
+          <div class="copyright">
+              <p>Rozdac</p>
+              <p>© copyright 2021.</p>
+              <p>Derechos Reservados UDB.</p>
+          </div>
+          <br>
+          <a class="top" href="#top"><img src="https://i.postimg.cc/nrDLzgZg/arrow-up.png" alt="Top"></a>
+      </footer>
+  </section>
     <script src="js/words.js"></script>
 </body>
 </html>
