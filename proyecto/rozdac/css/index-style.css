@@ -309,6 +309,9 @@
 }
 
 @media screen and (max-width: 768px){
+    #log{
+        margin-left: 44%;
+    }
     .head{
         margin-top: 22%;
     }
@@ -347,6 +350,9 @@
 }
 
 @media screen and (max-width: 425px){
+    #log{
+        margin-left: 32%;
+    }
     .backg img{
         margin-left: 8vw;
         width: 350px;
