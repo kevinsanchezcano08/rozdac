@@ -39,10 +39,10 @@
         if(strlen(trim($user))> 1 && strlen(trim($name))> 1 && strlen(trim($lastname))> 1 && strlen(trim($email))> 1 && strlen(trim($password))> 1 && strlen(trim($verify))> 1 && strlen(trim($telefono))> 1 && strlen(trim($fechaNac))> 1  && strlen(trim($municipio))> 1  && strlen(trim($departamento))> 1 ){
             if($password == $verify){
 
-                $direcion = $departamento.", ".$municipio;
+                $direcion = $municipio.", ".$departamento;
 
                 if(strlen(trim($direccion))> 1 ){
-                    $direcion = $direcion.", ".$direccion;
+                    $direcion = $direccion.", ".$direcion;
                 }
 
                 $name .= $lastname;
@@ -89,25 +89,43 @@
 
                 <input type="text" name="name" placeholder="Nombre" autocomplete="off" />
 
-                <input type="text" name="lastname" placeholder="Apellido" autocomplete="off" /><br>
+                <input type="text" name="lastname" placeholder="Apellido" autocomplete="off" /><br><br>
 
-                <input type="text" name="user" placeholder="Usuario" autocomplete="off" /><br><br>
+                <input type="text" name="user" placeholder="Nombre de Usuario" autocomplete="off" /><br><br>
 
-                <input type="text" name="email" placeholder="Correo Electrónico" autocomplete="off" /><br><br>
+                <input type="email" name="email" placeholder="Correo Electrónico" autocomplete="off" /><br><br>
 
                 <input type="password" name="password" placeholder="Contraseña" autocomplete="off" />
 
                 <input type="password" name="verify_password" placeholder="Confirmar contraseña" autocomplete="off" /><br><br>
 
-                <input type="text" name="telefono" placeholder="Telefono" autocomplete="off" /><br><br>
+                <input type="tel" name="telefono" placeholder="Teléfeno (Sin guión)" autocomplete="off" min="0" pattern="[0-9]{8}"/><br><br>
 
-                <input type="text" name="municipio" placeholder="Municipio" autocomplete="off" /><br><br>
+                <select name="departamento" id="departamento" onchange="selc();">
+                    <option value="0">Seleccione Departamento</option>
+                    <option>Ahuachapán</option>
+                    <option>Cabañas</option>
+                    <option>Chalatenango</option>
+                    <option>Cuscatlán</option>
+                    <option>La Libertad</option>
+                    <option>La Paz</option>
+                    <option>La Unión</option>
+                    <option>Morazán</option>
+                    <option>San Salvador</option>
+                    <option>San Vicente</option>
+                    <option>Santa Ana</option>
+                    <option>Sonsonate</option>
+                    <option>San Miguel</option>
+                    <option>Usulután</option>
+                </select>
 
-                <input type="text" name="departamento" placeholder="Departamento" autocomplete="off" /><br><br>
+                <select name="municipio" id="municipio" disabled onchange="munic_vac();">
+                    <option value="0">Seleccione Municipio</option>
+                </select><br><br>
 
                 <textarea name="direccion" placeholder="Dirección" cols="30" rows="10"></textarea><br><br>
 
-                <input type="date" name="fechaNac" autocomplete="off" ><br>
+                <input type="date" name="fechaNac" autocomplete="off" ><br><br>
 
                 <div class="errorMsg"><?php echo $errorMsg; ?></div>
 
@@ -116,6 +134,9 @@
             </form>
             <p>¿Ya tienes una cuenta <a href="login.php">aquí</a>?</p>    
             <a href="index.php">Regresar</a>
+
+            <script src="js/arrays_munics.js"></script>
+            <script src="js/dept_munic.js"></script>
         </div>
         
     </body>

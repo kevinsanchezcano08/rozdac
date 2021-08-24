@@ -43,8 +43,7 @@
                     <p>¡Hola, somos</p>
                     <p>
                         <span class="word">rozdac!</span>
-                        <span class="word">vender!</span>
-                        <span class="word">comprar!</span>
+                        <span class="word">rozdac!</span>
                     </p>
                     </div>
                 <a href="#description">Saber más <i class="fas fa-arrow-circle-down"></i></a>
@@ -72,15 +71,6 @@
                         de igual forma tus productos podrán ser adquiridos por tus clientes que cuenten con la aplicación, por lo cual se generarán solicitudes de compra con todos
                         los detalles de los productos y su total correspondiente, para ello podrás establecer un tiempo para preparar el pedido del cliente para que asi
                         solo llegué a recogerlo y cancelar el total.
-                    </p>
-                </div>
-                <div class="serv-user">
-                    <img src="media/recursos/shoping_app.svg">
-                    <h2>Para ti que compras</h2>
-                    <p>¿Aburrido/a de hacer tus compras de una forma tradicional? Rozdac ha llegado para cambiar eso, sabemos que siempre buscas los mejores
-                        precios o realizas todas tus compras desde la palma de tu mano, déjanos decirte que estas estas en el lugar indicado, con rozdac podrás
-                        realizar tus pedidos a tu negocio más cercano y con los mejores precios, luego el vendedor establecerá un tiempo para preparlo para que asi 
-                        solo vayas a recogerlo y cancelar el total de tu compra.
                     </p>
                 </div>
             </div>
@@ -133,7 +123,7 @@
                 <div class="lp">
                     <h1>Todo lo anterior se escucha chivo <span>¿cierto?</span></h1>
                     <img src="media/recursos/logo.jpg" alt="logo">
-                    <a href="#">¡Usar la app! <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="login.php">¡Usar la app! <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
         </div>
         <section>
