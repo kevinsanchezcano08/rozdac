@@ -1,6 +1,6 @@
 //Arreglos con cada uno de los municipios en su respectivo departamento
 function munics(){
-    muniAH = ["Ahuachpán","Apaneca","Atiquizaya","Concepción de Ataco","El Refugio","Guaymango","Jujutla","San Francisco Menéndez","San Lorenzo","San Pedro Puxtla","Tacuba","Turín"];
+    muniAH = ["Ahuachapán","Apaneca","Atiquizaya","Concepción de Ataco","El Refugio","Guaymango","Jujutla","San Francisco Menéndez","San Lorenzo","San Pedro Puxtla","Tacuba","Turín"];
 
     muniCAB = ["Sensuntepeque","Cinquera","Dolores","Guacotecti","Ilobasco","Jutiapa","San Isidro","Tejutepeque","Victoria"];
 
