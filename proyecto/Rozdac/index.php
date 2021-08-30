@@ -55,9 +55,9 @@
                 <i class="fas fa-question-circle"></i>
                 <h1>¿Qué es Rozdac?</h1>
                 <p>Rozdac es un app dedicada al comercio virtual que hoy en dia debido a la pandemia por covid-19, ha experimentado un boom dentro del mercado nacional e 
-                    internacional. Nuestra app cuenta con muchas funciones desde poder administrar tu pequeño negocio (Ej. Una tiendita) a traves del manejo de todo
-                    tu inventario el cual podrá ser solicitado a comprar a tráves de tus clientes que tambien tengan nuestra app, lo cual aumentará tus ganancias y 
-                    la eficacia de tu negocio al momento de calcular tus ingresos.
+                    internacional. Nuestra app cuenta con muchas funciones desde poder administrar tu pequeño negocio (Ej. Una tiendita de la colonia o un pequeño emprendimiento) a través del manejo de todo
+                    tu inventario el cual podrá ser compartido por tus redes sociales mediante un link para poder llegar así más clientes y aumentar tus ganancias.
+                    ¡EL FUTURO ES HOY!
                 </p>
             </div>
             <div class="serv">
@@ -66,11 +66,11 @@
                 <div class="serv-client">
                     <img src="media/recursos/business_shop.svg">
                     <h2>Para ti que vendes</h2>
-                    <p>¿Aburrido/a de administrar tu negocio una forma tradicional y tediosa? Con rozdac todo eso cambiará, como administrador/ra de tu negocio 
-                        podras agilizar todos estos procesos con la ayuda de nuestra app en ella podrás administrar todo tu inventario, calcular tus ingresos 
-                        de igual forma tus productos podrán ser adquiridos por tus clientes que cuenten con la aplicación, por lo cual se generarán solicitudes de compra con todos
-                        los detalles de los productos y su total correspondiente, para ello podrás establecer un tiempo para preparar el pedido del cliente para que asi
-                        solo llegué a recogerlo y cancelar el total.
+                    <p>¿Aburrido/a de administrar tu negocio una forma tradicional y tediosa? Con rozdac todo eso cambiará, como administrador/a de tu negocio 
+                        podrás agilizar muchos procesos, con la ayuda de nuestra app tendrás una herremienta para crear tu propio inventario 
+                        de productos cada uno con su nombre, descripción, precio, etc. Y asi llevar un mejor control del mismo
+                        además este lo podrás compartir a través de un link por tus redes sociales para que cualquier persona con un celular tenga acceso a el, innovando 
+                        asi la manera de poder llevar tus productos a más clientes potenciales.
                     </p>
                 </div>
             </div>
