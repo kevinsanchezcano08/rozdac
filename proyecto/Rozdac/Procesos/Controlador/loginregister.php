@@ -1,7 +1,7 @@
 <?php
 
-    require_once('Procesos/Modelos/class.conexion.php');
-    require_once('Procesos/Modelos/class.users.php');
+    require_once("Procesos/Modelos/class.conexion.php");
+    require_once("Procesos/Modelos/class.users.php");
 
     function registro($user, $name, $email, $password, $telefono, $fechaNac, $rol, $direccion){
         $userClass = new userClass();
@@ -11,16 +11,8 @@
 
         if($username_check && $email_check && $password_check){
             $userClass->userRegister($user, $name, $fechaNac, $email, $password, $rol, $telefono, $direccion);
-            switch($_SESSION['rol']){
-                case 1:
-                    $url = BASE_URL."Index.php";
-                    header("location: $url");
-                break;
-                case 2:
-                    $url = BASE_URL."Index.php";
-                    header("location: $url");
-                break;
-            }
+                $url = BASE_URL."index.php";
+                header("location: $url");
         }else{
             if(!$username_check)
                 return "Verifique el nombre de usuario.";
@@ -38,11 +30,15 @@
         if($userid){
             switch($_SESSION['rol']){
                 case 1:
-                    $url = BASE_URL."Index.php";
+                    $url = BASE_URL."index.php";
                     header("location: $url");
                 break;
                 case 2:
-                    $url = BASE_URL."Admin.php";
+                    $url = BASE_URL."index.php";
+                    header("location: $url");
+                break;
+                case 3:
+                    $url = BASE_URL."index.php";
                     header("location: $url");
                 break;
             }
