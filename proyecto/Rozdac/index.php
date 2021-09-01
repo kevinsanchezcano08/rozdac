@@ -141,7 +141,7 @@
                     <a href="https://github.com/kevinsanchezcano08" class="follow">GitHub</a>
                 </figcaption>
                 </figure> 
-                <?php if(isset($_SESSION['userid']) && isset($_SESSION['rol'])){ 
+                <?php if(isset($_SESSION['rol'])){ 
                     ?>
                     <div>
                         
