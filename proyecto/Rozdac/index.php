@@ -1,7 +1,6 @@
 <?php
 
     session_start();
-    // session_unset();
 
 ?>
 <!DOCTYPE html>
@@ -18,7 +17,6 @@
         <title>Inicio | Rozdac</title>
         </head>
     <body>
-        <!-- <a href="apis/cliente/negocios.php">Mis Negocios</a> -->
         
         <header>  
             <input type="checkbox" id="btn-menu">
@@ -27,12 +25,35 @@
             <nav class="menu">
                 <ul>
                     <li><a href="#top" id="logoAlb"></a></li>
+
+                    <?php if(isset($_SESSION['rol'])){ 
+                        ?>
+                        <?php
+                        switch($_SESSION['rol']){
+                            case 1:?>
+                            <li><a href="apis/cliente/negocios.php">Mis Negocios</a></li>
+                            <?php break; 
+                            case 2:?>
+                            <li><a href="apis/admin/show-users.php">Ver Usuarios</a></li>
+                            <li><a href="apis/admin/show-business.php">Ver Negocios</a></li>
+                            <?php break; 
+                            case 3:?>
+                            <li><a href="apis/admin/register-admin.php">Registrar Usuarios</a></li>
+                            <li><a href="apis/admin/show-users.php">Ver Usuarios</a></li>
+                            <li><a href="apis/admin/show-business.php">Ver Negocios</a></li>
+                           <?php break;
+                        }?>
+                        <li><a href="#">Mi Perfil</a></li>
+                        <li><a href="Procesos/Controlador/logout.php">Cerrar Sesión</a></li>
+                        <?php
+                    }else{?>
                     <li><a href="#description">¿Qué es Rozdac?</a></li>
                     <li><a href="#services">¿Por qué Rozdac?</a></li>
                     <li><a href="#team">Equipo</a></li>
-                    <?php if(isset($_SESSION['userid'])){ ?><li><a href="apis/cliente/negocios.php">Mis Negocios</a></li><?php } ?>
-                    <li><?php if(isset($_SESSION['userid'])){ ?><a href="#"><?php echo $_SESSION['userid']; ?></a> <?php }else{ ?><a href="login.php" id="login"><i class="fas fa-sign-in-alt"></i></a> <?php } ?> </li>
-                    <?php if(isset($_SESSION['userid'])){ ?><li><a href="Procesos/Controlador/logout.php">Cerrar Sesión</a></li><?php } ?>
+                    <li><a href="login.php" id="login"><i class="fas fa-sign-in-alt"></i></a></li>
+                    <?php
+                    }
+                    ?>
                 </ul>
             </nav>
         </header>
@@ -120,11 +141,20 @@
                     <a href="https://github.com/kevinsanchezcano08" class="follow">GitHub</a>
                 </figcaption>
                 </figure> 
-                <div class="lp">
+                <?php if(isset($_SESSION['userid']) && isset($_SESSION['rol'])){ 
+                    ?>
+                    <div>
+                        
+                    </div>
+                    <?php
+                }else{?>
+                     <div class="lp">
                     <h1>Todo lo anterior se escucha chivo <span>¿cierto?</span></h1>
                     <img src="media/recursos/logo.jpg" alt="logo">
                     <a href="login.php">¡Usar la app! <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
+               <?php }
+                ?>
         </div>
         <section>
             <footer class="container">
