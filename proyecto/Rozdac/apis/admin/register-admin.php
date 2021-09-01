@@ -84,7 +84,7 @@
                     <li><a href="#" id="logoAlb">.</a></li>
                     <li><a href="../../index.php">Inicio</a></li>
                     <li><a href="register-admin.php">Registrar Usuarios</a></li>
-                    <li><a href="show-all-users.php">Ver Usuarios</a></li>
+                    <li><a href="show-users.php">Ver Usuarios</a></li>
                     <li><a href="show-business.php">Ver Negocios</a></li>
                     <li><a href="#">Mi Perfil</a></li>
                     

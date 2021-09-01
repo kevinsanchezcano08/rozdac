@@ -1,7 +1,7 @@
 <?php
 require_once ("../../Procesos/Modelos/class.conexion.php");
 require_once ("../../Procesos/Modelos/class-actions.php");
-require_once ("../../Procesos/Controlador/show_business.php");
+require_once ("../../Procesos/Controlador/show_users.php");
 session_start();
 
 if(isset($_SESSION['rol'])){
@@ -24,7 +24,7 @@ if(isset($_SESSION['rol'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/menu.css">
         <link rel="stylesheet" type="text/css" href="../../css/footer.css">
-    <title>Negocios | Rozdac</title>
+    <title>Usuarios | Rozdac</title>
 </head>
 <body>
 <header>
@@ -36,33 +36,36 @@ if(isset($_SESSION['rol'])){
                 <ul>
                     <li><a href="#" id="logoAlb">.</a></li>
                     <li><a href="../../index.php">Inicio</a></li>
-                    <?php 
+                    <?php
                     if(isset($_SESSION['rol'])){
                         switch($_SESSION['rol']){
-                            case 2:
-                                ?>
-                                <li><a href="show-users.php">Ver Usuarios</a></li>
-                                <?php
-                            break;
                             case 3:
                                 ?>
                                 <li><a href="register-admin.php">Registrar Usuarios</a></li>
-                                <li><a href="show-users.php">Ver Usuarios</a></li>
                                 <?php
-                                break;
+                            break;
                         }
                     }
                     ?>
+                    <li><a href="show-users.php">Ver Usuarios</a></li>
                     <li><a href="show-business.php">Ver Negocios</a></li>
                     <li><a href="#">Mi Perfil</a></li>
                     
                 </ul>
             </nav>
         </header>
-    <h1>Negocios registrados</h1>
+    <h1>Usuarios del sistema</h1>
 <?php
-show_business();
+if(isset($_SESSION['rol'])){
+    switch($_SESSION['rol']){
+        case 2:
+            show_part();
+        break;
+        case 3:
+            show_all();
+        break;
+    }
+}
 ?>
-
 </body>
 </html>
