@@ -8,16 +8,10 @@
     session_start();
 
 
-    if(isset($_SESSION['userid']) && isset($_SESSION['rol'])){
-        switch($_SESSION['rol']){
-            case 2:
-                $url = BASE_URL."Admin.php";
-                header("location: $url");
-            break;
-        }
-    }else{
+    if(!(isset($_SESSION['rol']))){
         $url = BASE_URL."login.php";
         header("location: $url");
+       
     }
 
     if(isset($_GET['Id'])){

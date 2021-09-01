@@ -4,10 +4,14 @@
     $errorMsg = '';
     session_start();
 
-    if(isset($_SESSION['userid']) && isset($_SESSION['rol'])){
+    if( isset($_SESSION['rol'])){
         switch($_SESSION['rol']){
             case 2:
-                $url = BASE_URL."Admin.php";
+                $url = BASE_URL."index.php";
+                header("location: $url");
+            break;
+            case 3:
+                $url = BASE_URL."index.php";
                 header("location: $url");
             break;
         }
