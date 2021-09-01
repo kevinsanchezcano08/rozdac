@@ -7,11 +7,15 @@
     if(isset($_SESSION['rol'])){
         switch($_SESSION['rol']){
             case 1:
-                $url = BASE_URL."Index.php";
+                $url = BASE_URL."index.php";
                 header("location: $url");
             break;
             case 2:
-                $url = BASE_URL."Index.php";
+                $url = BASE_URL."index.php";
+                header("location: $url");
+            break;
+            case 3:
+                $url = BASE_URL."index.php";
                 header("location: $url");
             break;
             default:
@@ -68,12 +72,11 @@
 
                 <input type="text" name="useremail" placeholder="Usuario o email" autocomplete="off" />
 
-                <input type="password" name="password" placeholder="Contraseña" autocomplete="off" />
+                <input type="password" name="password" placeholder="Contraseña" autocomplete="off" /><br><br>
 
+                <input type="submit" value="Iniciar Sesión" name="enviar"/><br><br>
 
                 <div class="errorMsg"><?php echo $errorMsg; ?></div>
-
-                <input type="submit" value="Enviar" name="enviar"/>
 
             </form>
             <p>Registrate <a href="registro.php">aquí</a></p>

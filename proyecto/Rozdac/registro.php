@@ -7,11 +7,15 @@
     if(isset($_SESSION['rol'])){
         switch($_SESSION['rol']){
             case 1:
-                $url = BASE_URL."Index.php";
+                $url = BASE_URL."index.php";
                 header("location: $url");
             break;
             case 2:
-                $url = BASE_URL."Index.php";
+                $url = BASE_URL."index.php";
+                header("location: $url");
+            break;
+            case 3:
+                $url = BASE_URL."index.php";
                 header("location: $url");
             break;
             default:
@@ -45,7 +49,7 @@
                     $direcion = $direccion.", ".$direcion;
                 }
 
-                $name .= $lastname;
+                $name .= " " .$lastname;
                 $rol = 1;
                 $errorMsg = registro($user, $name, $email, $password, $telefono, $fechaNac, $rol, $direcion);
             }else{
@@ -125,6 +129,7 @@
 
                 <textarea name="direccion" placeholder="Dirección" cols="30" rows="10"></textarea><br><br>
 
+                <p>Fecha de Nacimiento:</p>
                 <input type="date" name="fechaNac" autocomplete="off" ><br><br>
 
                 <div class="errorMsg"><?php echo $errorMsg; ?></div>
