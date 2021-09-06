@@ -48,7 +48,11 @@ function find_business($name){
          echo "<td><a href='#'>Eliminar</a></td>";
          echo "</tr>";
         }
-}
+}else{
+        echo "<tr>";  
+        echo "<td colspan='5'>No se ha encontrado ningún negocio</td>";
+        echo "</tr>"; 
+        }
 echo "</table>";
 }
 ?>
