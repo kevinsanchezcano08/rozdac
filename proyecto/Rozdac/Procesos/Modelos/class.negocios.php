@@ -110,6 +110,36 @@
                 echo '{"error":{"text":'. $e->getMessage() .'}}'; 
             } 
         }
+        public function showBusiness(){
+            try{
+                $rows = null;
+                $modelo = new Conexion();
+                $db = $modelo->get_conexion();
+                $st = $db->prepare("SELECT * FROM negocio");
+                $st->execute();
+    
+                while($result = $st->fetch()){
+                    $rows[] = $result;
+                }
+                return $rows;
+            }catch(PDOException $e){
+                echo '{"error":{"text":'. $e->getMessage() .'}}'; 
+            }
+        }
+        public function findBusiness($arg_name){
+            $rows = null;
+            $modelo = new conexion();
+            $conexion = $modelo -> get_conexion();
+            $name = "%".$arg_name."%";
+            $sql = "select * from negocio where name like :name";
+            $statement = $conexion -> prepare($sql);
+            $statement -> bindParam(":name", $name);
+            $statement -> execute();
+            while ($result = $statement -> fetch()){
+                $rows[] = $result;
+            }
+            return $rows;
+        }
     }
 
 ?>

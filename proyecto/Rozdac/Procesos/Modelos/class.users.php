@@ -53,6 +53,11 @@
                     if(password_verify($password, $data['password'])){
                         $_SESSION['userid'] = $data['user'];
                         $_SESSION['rol'] = $data['rol'];
+                        $_SESSION['name'] = $data['name'];
+                        $_SESSION['email'] = $data['email'];
+                        $_SESSION['fechaNac'] = $data['fechaNac'];
+                        $_SESSION['direccion'] = $data['direccion'];
+                        $_SESSION['telefono'] = $data['telefono'];
                         return true;
                     }
                 }else{
@@ -62,4 +67,34 @@
                 echo '{"error":{"text":'. $e->getMessage() .'}}'; 
             }
         }
-    }
+        public function showUsers(){
+            try{
+                $rows = null;
+                $modelo = new Conexion();
+                $db = $modelo->get_conexion();
+                $st = $db->prepare("SELECT * FROM user");
+                $st->execute();
+    
+                while($result = $st->fetch()){
+                    $rows[] = $result;
+                }
+                return $rows;
+            }catch(PDOException $e){
+                echo '{"error":{"text":'. $e->getMessage() .'}}'; 
+            }
+        }
+        public function findUser($arg_name){
+            $rows = null;
+            $modelo = new conexion();
+            $conexion = $modelo -> get_conexion();
+            $name = "%".$arg_name."%";
+            $sql = "select * from user where name like :name";
+            $statement = $conexion -> prepare($sql);
+            $statement -> bindParam(":name", $name);
+            $statement -> execute();
+            while ($result = $statement -> fetch()){
+                $rows[] = $result;
+            }
+            return $rows;
+        }
+}
