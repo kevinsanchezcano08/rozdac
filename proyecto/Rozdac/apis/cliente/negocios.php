@@ -34,8 +34,9 @@
         <?php
             $nego = new negoClass();
             $user = $_SESSION['userid'];
-
+            
             mostrarnNegocios($user);
+
 
             $contar = $nego->contarNegocios($user);
             if($contar){

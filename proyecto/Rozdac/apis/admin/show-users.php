@@ -1,6 +1,6 @@
 <?php
 require_once ("../../Procesos/Modelos/class.conexion.php");
-require_once ("../../Procesos/Modelos/class-actions.php");
+require_once ("../../Procesos/Modelos/class.users.php");
 require_once ("../../Procesos/Controlador/show_users.php");
 session_start();
 
@@ -23,7 +23,9 @@ if(isset($_SESSION['rol'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/menu.css">
-        <link rel="stylesheet" type="text/css" href="../../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../css/tablas.css">
+    <link rel="shortcut icon" href="../../media/recursos/favicon.jpg" type="image/x-icon">
     <title>Usuarios | Rozdac</title>
 </head>
 <body>
@@ -49,20 +51,36 @@ if(isset($_SESSION['rol'])){
                     ?>
                     <li><a href="show-users.php">Ver Usuarios</a></li>
                     <li><a href="show-business.php">Ver Negocios</a></li>
-                    <li><a href="#">Mi Perfil</a></li>
+                    <li><a href="../../profile.php">Mi Perfil</a></li>
                     
                 </ul>
             </nav>
         </header>
+        <div class="tabla">
+
+        </div>
     <h1>Usuarios del sistema</h1>
+    <form method="get">
+             <input id="Btxt"type="text" name="buscar" placeholder="Buscar Usuario">
+             <input id="Bbtn"type="submit" value="Buscar">
+             <input id="Bbtn"type="submit" value="Ver todos">
+    </form>
 <?php
 if(isset($_SESSION['rol'])){
     switch($_SESSION['rol']){
         case 2:
-            show_part();
+            if(isset($_GET['buscar'])){
+                find_part($_GET['buscar']);
+            }else{
+                show_part();
+            }
         break;
         case 3:
-            show_all();
+            if(isset($_GET['buscar'])){
+                find_all($_GET['buscar']);
+            }else{
+                show_all();
+            }
         break;
     }
 }

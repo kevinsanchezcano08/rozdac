@@ -71,6 +71,7 @@
         <link rel="stylesheet" type="text/css" href="../../css/footer.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="shortcut icon" href="../../media/recursos/favicon.jpg" type="image/x-icon">
         <title>Registro de usuarios | Rozdac</title>
     </head>
     <body>
@@ -86,7 +87,7 @@
                     <li><a href="register-admin.php">Registrar Usuarios</a></li>
                     <li><a href="show-users.php">Ver Usuarios</a></li>
                     <li><a href="show-business.php">Ver Negocios</a></li>
-                    <li><a href="#">Mi Perfil</a></li>
+                    <li><a href="../../profile.php">Mi Perfil</a></li>
                     
                 </ul>
             </nav>

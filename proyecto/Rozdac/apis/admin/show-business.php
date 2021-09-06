@@ -1,6 +1,6 @@
 <?php
 require_once ("../../Procesos/Modelos/class.conexion.php");
-require_once ("../../Procesos/Modelos/class-actions.php");
+require_once ("../../Procesos/Modelos/class.negocios.php");
 require_once ("../../Procesos/Controlador/show_business.php");
 session_start();
 
@@ -23,7 +23,9 @@ if(isset($_SESSION['rol'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/menu.css">
-        <link rel="stylesheet" type="text/css" href="../../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../css/tablas.css">
+    <link rel="shortcut icon" href="../../media/recursos/favicon.jpg" type="image/x-icon">
     <title>Negocios | Rozdac</title>
 </head>
 <body>
@@ -54,15 +56,28 @@ if(isset($_SESSION['rol'])){
                     }
                     ?>
                     <li><a href="show-business.php">Ver Negocios</a></li>
-                    <li><a href="#">Mi Perfil</a></li>
+                    <li><a href="../../profile.php">Mi Perfil</a></li>
                     
                 </ul>
             </nav>
         </header>
-    <h1>Negocios registrados</h1>
+        <div class="tabla">
+        <h1>Negocios registrados</h1>
+    <form method="get">
+        <input id="Btxt"type="text" name="buscar" placeholder="Buscar Negocio">
+        <input id="Bbtn"type="submit"  value="Buscar">
+        <input id="Bbtn"type="submit" value="Ver todos">
+    </form>
 <?php
-show_business();
+
+if(isset($_GET['buscar'])){
+    find_business($_GET['buscar']);
+}else{
+    show_business();
+}
+
 ?>
+</div>
 
 </body>
 </html>
